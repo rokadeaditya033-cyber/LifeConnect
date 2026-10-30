@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeConnect - Donate Blood, Save Lives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-droplet pulse-icon"></i>
+            <span>Life</span>Connect
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="request-blood.html">Request Blood</a></li>
+                <li><a href="donate-blood.html">Donate Blood</a></li>
+                <li><a href="find-donors.html">Find Donors</a></li>
+                <li><a href="blood-camps.html">Blood Camps</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login / Register</a></li>
+                <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your One Donation Can Save Three Lives.</h1>
+            <p>Be someone's hope. Connect instantly with verified donors and emergency blood services across Maharashtra.</p>
+            <div class="hero-buttons">
+                <a href="request-blood.html" class="btn btn-primary"><i class="fa-solid fa-hand-holding-medical"></i> Request Blood</a>
+                <a href="donate-blood.html" class="btn btn-secondary"><i class="fa-solid fa-heart-pulse"></i> Become a Donor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-users"></i>
+                <h3 id="statDonors">0</h3>
+                <p>Total Registered Donors</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-file-medical"></i>
+                <h3 id="statRequests">0</h3>
+                <p>Total Blood Requests</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3 id="statFulfilled">0</h3>
+                <p>Successful Requests</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-tent"></i>
+                <h3 id="statCamps">0</h3>
+                <p>Total Donation Camps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works container">
+        <h2 class="section-title">How <span>LifeConnect</span> Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <i class="fa-solid fa-user-plus"></i>
+                <h3>Register or Request</h3>
+                <p>Sign up as a donor in seconds or submit an urgent blood request with your hospital details.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Smart Matching</h3>
+                <p>Our platform filters verified donors by blood group and location across Maharashtra instantly.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <i class="fa-solid fa-heart"></i>
+                <h3>Save Lives</h3>
+                <p>Coordinate safely, complete the donation, and help bring hope back to families in need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Requests Ticker / Preview -->
+    <section class="emergency-preview container">
+        <div class="section-header">
+            <h2 class="section-title">Active Emergency Requests</h2>
+            <a href="request-blood.html" class="view-all">View All / Track &rarr;</a>
+        </div>
+        <div id="homeEmergencyGrid" class="emergency-grid">
+            <!-- Dynamically populated via main.js -->
+        </div>
+    </section>
+
+    <!-- Upcoming Camps Preview -->
+    <section class="camps-preview container">
+        <div class="section-header">
+            <h2 class="section-title">Upcoming Donation Camps</h2>
+            <a href="blood-camps.html" class="view-all">Explore All Camps &rarr;</a>
+        </div>
+        <div id="homeCampsGrid" class="camps-grid">
+            <!-- Dynamically populated via main.js -->
+        </div>
+    </section>
+
+    <!-- Awareness & Facts Section -->
+    <section class="awareness-preview">
+        <div class="container awareness-flex">
+            <div class="awareness-text">
+                <h2>Why Blood Donation Matters</h2>
+                <p>Every 2 seconds someone needs blood. A single donation can be separated into red blood cells, platelets, and plasma, helping multiple patients battling trauma, surgeries, and chronic illnesses.</p>
+                <a href="awareness.html" class="btn btn-primary">Read Awareness Guide</a>
+            </div>
+            <div class="awareness-fact-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Did You Know?</h3>
+                <p id="dailyFact">Only 1% of the population donates blood regularly, yet 1 in 3 people will need a blood transfusion in their lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials container">
+        <h2 class="section-title">Community Stories</h2>
+        <p class="section-subtitle">(Demonstration feedback from patients and donors)</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"LifeConnect helped us secure O-positive blood within 45 minutes during an emergency in Nashik. Truly a life-saving platform!"</p>
+                <h4>- Rajesh K., Nashik</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Registering as a donor was seamless. I got notified of a patient in Pune and was able to donate directly at the hospital."</p>
+                <h4>- Sneha P., Pune</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"The UI is clean and fast, and tracking requests gives complete peace of mind."</p>
+                <h4>- Amit R., Mumbai</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><span>Life</span>Connect</h3>
+                <p>A Community Engagement Project (CEP) connecting heroes with patients across Maharashtra.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="request-blood.html">Request Blood</a></li>
+                    <li><a href="donate-blood.html">Donate Blood</a></li>
+                    <li><a href="find-donors.html">Find Donors</a></li>
+                    <li><a href="blood-camps.html">Blood Camps</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Maharashtra Hubs</h4>
+                <ul>
+                    <li>Pune</li>
+                    <li>Nashik</li>
+                    <li>Ahilyanagar (Ahmednagar)</li>
+                    <li>Shrirampur</li>
+                    <li>Sangamner</li>
+                    <li>Mumbai</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Maharashtra, India</p>
+                <p><i class="fa-solid fa-phone"></i> +91 1800-LIFE-CONNECT</p>
+                <p><i class="fa-solid fa-envelope"></i> support@lifeconnect.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

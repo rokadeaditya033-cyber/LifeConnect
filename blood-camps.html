@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Camps - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand"><i class="fa-solid fa-droplet"></i><span>Life</span>Connect</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="request-blood.html">Request Blood</a></li>
+                <li><a href="donate-blood.html">Donate Blood</a></li>
+                <li><a href="find-donors.html">Find Donors</a></li>
+                <li><a href="blood-camps.html" class="active">Blood Camps</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Blood Donation Camps</h1>
+            <p>Find upcoming donation drives across Maharashtra and register to participate.</p>
+        </div>
+    </section>
+
+    <main class="container my-4">
+        <div class="filter-bar card mb-4">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="campCityFilter">Filter by City</label>
+                    <select id="campCityFilter">
+                        <option value="">All Maharashtra Cities</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nashik">Nashik</option>
+                        <option value="Ahilyanagar">Ahilyanagar (Ahmednagar)</option>
+                        <option value="Shrirampur">Shrirampur</option>
+                        <option value="Sangamner">Sangamner</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <h2>Upcoming Camps</h2>
+        <div id="campsGrid" class="camps-grid mt-3"></div>
+
+        <h2 class="mt-5">Completed Camps & Impact</h2>
+        <div id="completedCampsGrid" class="camps-grid mt-3"></div>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom text-center">
+            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/camps.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <h2>LifeConnect Admin</h2>
+            <ul>
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#donors">Donors</a></li>
+                <li><a href="#requests">Blood Requests</a></li>
+                <li><a href="#camps">Camps</a></li>
+                <li><a href="#" id="adminLogout">Logout</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content container">
+            <h2>Dashboard Overview</h2>
+            <div class="stats-grid mt-3">
+                <div class="stat-card"><h3 id="admStatDonors">0</h3><p>Total Donors</p></div>
+                <div class="stat-card"><h3 id="admStatRequests">0</h3><p>Total Requests</p></div>
+                <div class="stat-card"><h3 id="admStatPending">0</h3><p>Pending Requests</p></div>
+                <div class="stat-card"><h3 id="admStatCamps">0</h3><p>Total Camps</p></div>
+            </div>
+
+            <div class="card mt-4">
+                <h3>Blood Requests Management</h3>
+                <div class="table-responsive mt-3">
+                    <table class="admin-table" id="adminRequestsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Patient</th>
+                                <th>Blood Group</th>
+                                <th>City</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

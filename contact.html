@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand"><i class="fa-solid fa-droplet"></i><span>Life</span>Connect</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="request-blood.html">Request Blood</a></li>
+                <li><a href="donate-blood.html">Donate Blood</a></li>
+                <li><a href="find-donors.html">Find Donors</a></li>
+                <li><a href="blood-camps.html">Blood Camps</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us & Feedback</h1>
+            <p>Get in touch with our support team or submit your feedback.</p>
+        </div>
+    </section>
+
+    <main class="container my-4">
+        <div class="form-container card">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Your Name *</label>
+                    <input type="text" id="contactName" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address *</label>
+                    <input type="email" id="contactEmail" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject *</label>
+                    <input type="text" id="contactSubject" required placeholder="Inquiry / Feedback">
+                </div>
+                <div class="form-group">
+                    <label for="contactMsg">Message *</label>
+                    <textarea id="contactMsg" rows="4" required placeholder="Type your message here"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom text-center">
+            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

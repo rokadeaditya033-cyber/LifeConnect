@@ -1,0 +1,8 @@
+.form-container { max-width: 700px; margin: 0 auto; }
+.form-row { display: flex; gap: 20px; }
+.form-group { margin-bottom: 1.2rem; flex: 1; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 5px; color: var(--dark-navy); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid var(--gray-border); border-radius: 6px; font-size: 1rem; }
+.btn-block { width: 100%; margin-top: 10px; }
+.main-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+@media(max-width: 900px) { .main-content-grid { grid-template-columns: 1fr; } .form-row { flex-direction: column; gap: 0; } }

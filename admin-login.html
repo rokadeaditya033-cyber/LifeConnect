@@ -1,0 +1,34 @@
+<!-- admin-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="auth-wrapper container">
+        <div class="form-container card my-5">
+            <h2>Admin Demo Login</h2>
+            <p><small>(Use credentials: <strong>admin / admin123</strong>)</small></p>
+            <form id="adminLoginForm">
+                <div class="form-group mt-3">
+                    <label for="adminUser">Username</label>
+                    <input type="text" id="adminUser" required value="admin">
+                </div>
+                <div class="form-group">
+                    <label for="adminPass">Password</label>
+                    <input type="password" id="adminPass" required value="admin123">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Admin Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.admin-layout { display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background: var(--dark-navy); color: white; padding: 20px; }
+.sidebar h2 { font-size: 1.3rem; margin-bottom: 30px; color: var(--primary-red); }
+.sidebar ul { list-style: none; }
+.sidebar ul li a { display: block; color: #cfd8dc; text-decoration: none; padding: 12px 15px; border-radius: 6px; margin-bottom: 8px; transition: var(--transition); }
+.sidebar ul li a:hover, .sidebar ul li a.active { background: var(--primary-red); color: white; }
+.admin-content { flex: 1; padding: 30px; background: var(--off-white); }
+.admin-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.admin-table th, .admin-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--gray-border); }
+.admin-table th { background: var(--dark-navy); color: white; }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Donor - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Life</span>Connect
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="request-blood.html">Request Blood</a></li>
+                <li><a href="donate-blood.html" class="active">Donate Blood</a></li>
+                <li><a href="find-donors.html">Find Donors</a></li>
+                <li><a href="blood-camps.html">Blood Camps</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Donor Registration Portal</h1>
+            <p>Join our network of lifesaving heroes across Maharashtra.</p>
+        </div>
+    </section>
+
+    <!-- Registration & Eligibility Grid -->
+    <main class="container main-content-grid">
+        <div class="form-container card">
+            <h2><i class="fa-solid fa-user-plus"></i> Donor Registration Form</h2>
+            <form id="donorRegistrationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age (18 - 65) *</label>
+                        <input type="number" id="age" min="18" max="65" required placeholder="Your age">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorBloodGroup">Blood Group *</label>
+                        <select id="donorBloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorMobile">Mobile Number *</label>
+                        <input type="tel" id="donorMobile" pattern="[6-9][0-9]{9}" required placeholder="10-digit Indian mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Email Address *</label>
+                        <input type="email" id="donorEmail" required placeholder="name@example.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorCity">City (Maharashtra Only) *</label>
+                        <select id="donorCity" required>
+                            <option value="">Select City</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Nashik">Nashik</option>
+                            <option value="Ahilyanagar">Ahilyanagar (Ahmednagar)</option>
+                            <option value="Shrirampur">Shrirampur</option>
+                            <option value="Sangamner">Sangamner</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorArea">Area / Locality *</label>
+                        <input type="text" id="donorArea" required placeholder="e.g. Gangapur Road / Camp">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pinCode">PIN Code (6 digits) *</label>
+                        <input type="text" id="pinCode" pattern="[0-9]{6}" required placeholder="422001">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastDonationDate">Last Blood Donation Date</label>
+                        <input type="date" id="lastDonationDate">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="availabilityStatus">Availability Status *</label>
+                    <select id="availabilityStatus" required>
+                        <option value="Available">Available to Donate</option>
+                        <option value="Busy">Currently Unavailable</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-heart-circle-check"></i> Register as Donor</button>
+            </form>
+        </div>
+
+        <!-- Eligibility Guide Sidebar -->
+        <div class="eligibility-sidebar">
+            <div class="card">
+                <h3><i class="fa-solid fa-circle-info"></i> Eligibility Checklist</h3>
+                <ul class="eligibility-list">
+                    <li><i class="fa-solid fa-check text-success"></i> Age between 18 and 65 years.</li>
+                    <li><i class="fa-solid fa-check text-success"></i> Weight at least 45 kg.</li>
+                    <li><i class="fa-solid fa-check text-success"></i> Hemoglobin levels within normal range.</li>
+                    <li><i class="fa-solid fa-check text-success"></i> Free from transmissible infections and acute illnesses.</li>
+                </ul>
+                <p class="disclaimer-text mt-3">
+                    <small>Note: Final eligibility is determined by qualified medical professionals and blood bank guidelines prior to donation.</small>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom text-center">
+            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/donor.js"></script>
+</body>
+</html>

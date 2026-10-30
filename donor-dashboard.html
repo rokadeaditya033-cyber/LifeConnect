@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand"><i class="fa-solid fa-droplet"></i><span>Life</span>Connect</div>
+        <nav><ul class="nav-links"><li><a href="#" id="logoutBtn">Logout</a></li></ul></nav>
+    </header>
+    <main class="container my-4">
+        <h2>Welcome, <span id="donorWelcomeName">Donor</span></h2>
+        <div class="card mt-3">
+            <h3>Your Donor Profile Status</h3>
+            <p id="donorProfileInfo" class="mt-2"></p>
+            <button id="toggleAvailabilityBtn" class="btn btn-secondary mt-3">Toggle Availability</button>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/donor.js"></script>
+</body>
+</html>

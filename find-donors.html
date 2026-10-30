@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Donors - LifeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Life</span>Connect
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="request-blood.html">Request Blood</a></li>
+                <li><a href="donate-blood.html">Donate Blood</a></li>
+                <li><a href="find-donors.html" class="active">Find Donors</a></li>
+                <li><a href="blood-camps.html">Blood Camps</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Find Blood Donors</h1>
+            <p>Search our verified Maharashtra donor registry by blood group and city.</p>
+        </div>
+    </section>
+
+    <!-- Search Filters Section -->
+    <main class="container my-4">
+        <div class="search-filter-card card">
+            <div class="filter-grid">
+                <div class="form-group">
+                    <label for="filterBloodGroup">Blood Group</label>
+                    <select id="filterBloodGroup">
+                        <option value="">All Blood Groups</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filterCity">City (Maharashtra)</label>
+                    <select id="filterCity">
+                        <option value="">All Cities</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nashik">Nashik</option>
+                        <option value="Ahilyanagar">Ahilyanagar (Ahmednagar)</option>
+                        <option value="Shrirampur">Shrirampur</option>
+                        <option value="Sangamner">Sangamner</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filterStatus">Availability</label>
+                    <select id="filterStatus">
+                        <option value="">Any Status</option>
+                        <option value="Available">Available Only</option>
+                    </select>
+                </div>
+                <div class="form-group filter-actions" style="display: flex; align-items: flex-end; gap: 10px;">
+                    <button id="searchDonorsBtn" class="btn btn-primary" style="flex: 1;"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                    <button id="resetSearchBtn" class="btn btn-secondary" style="flex: 1;"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Results Grid -->
+        <div class="mt-4">
+            <h2>Matching Donors</h2>
+            <div id="donorResultsGrid" class="donors-grid mt-3">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom text-center">
+            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
