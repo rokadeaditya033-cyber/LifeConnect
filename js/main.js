@@ -22,11 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHomeEmergency();
     renderHomeCamps();
 
-    // Hamburger menu toggle
+    // Hamburger menu toggle with outside click & link click handlers
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking any navigation link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                navLinks.classList.remove('active');
+            }
+        });
     }
 });
 

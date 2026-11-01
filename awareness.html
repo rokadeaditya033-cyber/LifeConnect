@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awareness & Education - LifeConnect</title>
+    <title>Awareness & Education - BloodConnect</title>
+    <meta name="description" content="Learn blood donation facts, compatibility matrices, eligibility rules, and test your knowledge with our interactive quiz.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header class="navbar">
-        <div class="nav-brand"><i class="fa-solid fa-droplet"></i><span>Life</span>Connect</div>
+        <div class="nav-brand">
+            <i class="fa-solid fa-droplet pulse-icon"></i>
+            <span>Blood</span>Connect
+        </div>
         <nav>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
@@ -21,83 +26,549 @@
                 <li><a href="awareness.html" class="active">Awareness</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login / Register</a></li>
                 <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
+    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Blood Donation Awareness Hub</h1>
-            <p>Learn facts, mythbusters, compatibility charts, and test your knowledge.</p>
+            <h1><i class="fa-solid fa-book-medical" style="color: var(--primary-red); margin-right: 10px;"></i>Blood Donation Awareness Hub</h1>
+            <p>Empowering voluntary donors across Maharashtra with scientific facts, mythbusters, eligibility criteria, and interactive quizzes.</p>
         </div>
     </section>
 
-    <main class="container my-4">
+    <main class="container my-4" style="margin-top: 2.5rem; margin-bottom: 4rem;">
+        
         <!-- Compatibility Matrix -->
-        <div class="card mb-4">
-            <h2>Red Blood Cell Compatibility Chart</h2>
+        <div class="card mb-4" style="margin-bottom: 2.5rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                <h2 style="color: var(--dark-navy); font-size: 1.6rem;">
+                    <i class="fa-solid fa-dna" style="color: var(--primary-red); margin-right: 8px;"></i>Red Blood Cell Compatibility Matrix
+                </h2>
+                <span style="font-size: 0.9rem; color: #64748b;">
+                    <i class="fa-solid fa-circle-info"></i> Whole Blood & Packed Red Cells
+                </span>
+            </div>
+            <p style="color: #555; margin-top: 8px; font-size: 0.96rem;">
+                Knowing who you can give blood to—and receive blood from—helps emergency response teams match critical transfusions without delay.
+            </p>
             <div class="table-responsive mt-3">
                 <table class="compat-table">
                     <thead>
                         <tr>
                             <th>Blood Type</th>
-                            <th>Can Donate To</th>
-                            <th>Can Receive From</th>
+                            <th>Can Donate Red Blood Cells To</th>
+                            <th>Can Receive Red Blood Cells From</th>
+                            <th>Key Characteristic</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>O-</td><td>Everyone (Universal Donor)</td><td>O-</td></tr>
-                        <tr><td>O+</td><td>O+, A+, B+, AB+</td><td>O+, O-</td></tr>
-                        <tr><td>A-</td><td>A-, A+, AB-, AB+</td><td>A-, O-</td></tr>
-                        <tr><td>A+</td><td>A+, AB+</td><td>A+, A-, O+, O-</td></tr>
-                        <tr><td>B-</td><td>B-, B+, AB-, AB+</td><td>B-, O-</td></tr>
-                        <tr><td>B+</td><td>B+, AB+</td><td>B+, B-, O+, O-</td></tr>
-                        <tr><td>AB-</td><td>AB-, AB+</td><td>AB-, A-, B-, O-</td></tr>
-                        <tr><td>AB+</td><td>AB+ (Universal Recipient)</td><td>Everyone</td></tr>
+                        <tr>
+                            <td><strong>O-</strong></td>
+                            <td>All Blood Types (O-, O+, A-, A+, B-, B+, AB-, AB+)</td>
+                            <td>O- only</td>
+                            <td><span class="badge-tag universal"><i class="fa-solid fa-star"></i> Universal Red Cell Donor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>O+</strong></td>
+                            <td>O+, A+, B+, AB+</td>
+                            <td>O+, O-</td>
+                            <td>Most common blood group in India</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A-</strong></td>
+                            <td>A-, A+, AB-, AB+</td>
+                            <td>A-, O-</td>
+                            <td>Can assist A and AB negative patients</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A+</strong></td>
+                            <td>A+, AB+</td>
+                            <td>A+, A-, O+, O-</td>
+                            <td>Second most common blood group</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B-</strong></td>
+                            <td>B-, B+, AB-, AB+</td>
+                            <td>B-, O-</td>
+                            <td>Rare negative group with high demand</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B+</strong></td>
+                            <td>B+, AB+</td>
+                            <td>B+, B-, O+, O-</td>
+                            <td>Highly prevalent across Maharashtra</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AB-</strong></td>
+                            <td>AB-, AB+</td>
+                            <td>AB-, A-, B-, O-</td>
+                            <td>Rarest blood group in India (~1%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AB+</strong></td>
+                            <td>AB+ only</td>
+                            <td>All Blood Types (O-, O+, A-, A+, B-, B+, AB-, AB+)</td>
+                            <td><span class="badge-tag recipient"><i class="fa-solid fa-heart"></i> Universal Recipient</span></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Myth vs Fact Section -->
-        <div class="card mb-4">
-            <h2>Myth vs Fact</h2>
-            <div class="myth-fact-grid mt-3">
-                <div class="mf-box">
-                    <h4>❌ Myth: Blood donation causes permanent weakness.</h4>
-                    <p>✔️ Fact: The human body replaces donated fluid within 24–48 hours and red blood cells within 4–6 weeks.</p>
-                </div>
-                <div class="mf-box">
-                    <h4>❌ Myth: You can contract infections during donation.</h4>
-                    <p>✔️ Fact: All collection equipment is sterile, disposable, and used only once per donor.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Interactive Quiz Section -->
-        <div class="card mb-4">
-            <h2>Blood Donation Knowledge Quiz</h2>
-            <div id="quizContainer" class="mt-3">
-                <div id="questionBox">
-                    <h4 id="questionTitle">Question 1: How often can a healthy male donate whole blood?</h4>
-                    <div class="options-list mt-3">
-                        <label><input type="radio" name="q1" value="wrong"> Every 30 days</label><br>
-                        <label><input type="radio" name="q1" value="correct"> Every 3 months (90 days)</label><br>
-                        <label><input type="radio" name="q1" value="wrong"> Once a year</label>
+        <!-- Myth vs Fact Section (Expanded with 6 common misconceptions) -->
+        <div class="card mb-4" style="margin-bottom: 2.5rem;">
+            <h2 style="color: var(--dark-navy); font-size: 1.6rem;">
+                <i class="fa-solid fa-shield-halved" style="color: var(--primary-red); margin-right: 8px;"></i>Busting Common Myths: Facts That Save Lives
+            </h2>
+            <p style="color: #555; margin-top: 8px; font-size: 0.96rem;">
+                Misinformation is the single biggest hurdle preventing voluntary donation. Here is what medical science confirms:
+            </p>
+            <div class="myth-fact-grid">
+                
+                <!-- Card 1 -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: Donating blood causes permanent weakness, dizziness, or low stamina.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> The body replenishes lost plasma fluid within 24–48 hours and produces fresh red blood cells within 4–6 weeks. Healthy donors resume normal daily activities immediately after a brief 15-minute rest.</span>
                     </div>
                 </div>
-                <button id="submitQuizBtn" class="btn btn-primary mt-3">Submit Quiz</button>
-                <p id="quizResult" class="mt-2 font-weight-bold"></p>
+
+                <!-- Card 2 -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: You can contract HIV, Hepatitis, or other infections during donation.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> Zero risk! All collection needles, tubes, and blood bags are factory-sterilized, single-use, opened right before your eyes, and safely incinerated after. Infection transfer is medically impossible.</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 (New) -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: Vegetarians and vegans cannot donate blood due to low iron or protein.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> Diet does not disqualify anyone! Millions of plant-based donors have robust hemoglobin levels. Your hemoglobin is verified for free (min 12.5 g/dL) right on-site before every donation.</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 (New) -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: Having a tattoo or body piercing permanently disqualifies you for life.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> Tattoos do NOT permanently bar you. You are fully eligible after a standard 6-month safety window (to eliminate any viral transmission window), provided the procedure was done in a hygienic studio.</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 (New) -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: The donation process is very painful, frightening, and takes several hours.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> The blood collection takes only 8 to 10 minutes with just a momentary pinch when the needle enters. The entire visit—including registration, screening, and snacks—is finished in under 45 minutes!</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 (New) -->
+                <div class="mf-card">
+                    <div class="mf-myth">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Myth: Taking routine medications (blood pressure, thyroid, cholesterol) completely disqualifies you.</span>
+                    </div>
+                    <div class="mf-fact">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Fact:</strong> Most chronic maintenance pills do not disqualify you! If your blood pressure or thyroid is well-controlled on your regular medication and you feel healthy, you are welcome to donate.</span>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <!-- Section 3: Interactive Eligibility Quick Check & Step-by-Step Timeline -->
+        <div class="card mb-4" style="margin-bottom: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <h2 style="color: var(--dark-navy); font-size: 1.6rem;">
+                    <i class="fa-solid fa-clipboard-check" style="color: var(--primary-red); margin-right: 8px;"></i>Donation Eligibility Quick Check
+                </h2>
+                <span class="badge-tag" style="background: #e2e8f0; color: #334155;">Interactive Self-Assessment</span>
+            </div>
+            <p style="color: #555; margin-top: 8px; font-size: 0.96rem;">
+                Check whether you meet standard voluntary blood donation guidelines (as prescribed by the National Blood Transfusion Council & WHO) before visiting a camp.
+            </p>
+
+            <div class="eligibility-container">
+                <!-- Interactive Form -->
+                <form id="eligibilityForm" class="eligibility-form">
+                    <div class="eligibility-grid-inputs">
+                        <div class="check-group">
+                            <label for="checkAge"><i class="fa-solid fa-cake-candles" style="color: var(--primary-red);"></i> Your Age (Years)</label>
+                            <input type="number" id="checkAge" min="15" max="80" value="25" placeholder="e.g. 25" required>
+                            <small style="color: #64748b;">Must be 18 to 65 years</small>
+                        </div>
+                        <div class="check-group">
+                            <label for="checkWeight"><i class="fa-solid fa-weight-scale" style="color: var(--primary-red);"></i> Body Weight (kg)</label>
+                            <input type="number" id="checkWeight" min="30" max="150" value="60" placeholder="e.g. 60" required>
+                            <small style="color: #64748b;">Minimum 45 kg (50 kg preferred)</small>
+                        </div>
+                    </div>
+
+                    <div class="check-group mt-2">
+                        <label for="checkHb"><i class="fa-solid fa-droplet" style="color: var(--primary-red);"></i> Hemoglobin Level</label>
+                        <select id="checkHb" required>
+                            <option value="normal" selected>Normal / ≥ 12.5 g/dL (Tested or healthy)</option>
+                            <option value="unsure">Unsure (Will get finger-prick tested free at camp)</option>
+                            <option value="low">Known to be Low (&lt; 12.5 g/dL / Anemic)</option>
+                        </select>
+                    </div>
+
+                    <div class="check-group mt-2">
+                        <label for="checkHealth"><i class="fa-solid fa-heart-pulse" style="color: var(--primary-red);"></i> How do you feel today?</label>
+                        <select id="checkHealth" required>
+                            <option value="healthy" selected>Healthy & well (No active fever, flu, or infection)</option>
+                            <option value="sick">Currently unwell / cold / fever in last 48 hours</option>
+                        </select>
+                    </div>
+
+                    <div class="check-group mt-2">
+                        <label for="checkLastDonation"><i class="fa-solid fa-calendar" style="color: var(--primary-red);"></i> When was your last whole blood donation?</label>
+                        <select id="checkLastDonation" required>
+                            <option value="eligible" selected>First-time donor OR over 3 months ago (90+ days)</option>
+                            <option value="recent">Within the last 3 months (less than 90 days ago)</option>
+                        </select>
+                    </div>
+
+                    <div class="check-group mt-2">
+                        <label for="checkTattoo"><i class="fa-solid fa-pen-nib" style="color: var(--primary-red);"></i> Any new tattoo or piercing in last 6 months?</label>
+                        <select id="checkTattoo" required>
+                            <option value="no" selected>No new tattoos or piercings in the past 6 months</option>
+                            <option value="yes">Yes, got one within the last 6 months</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <button type="submit" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <i class="fa-solid fa-calculator"></i> Check Eligibility Now
+                        </button>
+                        <button type="button" id="resetEligibilityBtn" class="btn btn-secondary" style="background: #e2e8f0; color: #334155;">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Result Card -->
+                <div class="eligibility-result-card">
+                    <h3 style="color: var(--dark-navy); margin-bottom: 12px; font-size: 1.2rem;">
+                        <i class="fa-solid fa-stethoscope" style="color: var(--primary-red); margin-right: 6px;"></i>Eligibility Assessment
+                    </h3>
+                    <div id="eligibilityResultBox" class="result-box initial">
+                        <i class="fa-solid fa-user-check" style="font-size: 2.5rem; color: #94a3b8; margin-bottom: 10px; display: block;"></i>
+                        <strong style="display: block; font-size: 1.05rem; margin-bottom: 6px;">Ready to Check</strong>
+                        <p style="font-size: 0.92rem; margin: 0;">Adjust the parameters on the left and click <strong>Check Eligibility Now</strong> to see your live status.</p>
+                    </div>
+
+                    <div style="margin-top: 16px; padding: 14px; background: #f8fafc; border-radius: 6px; font-size: 0.88rem; color: #475569; line-height: 1.5;">
+                        <i class="fa-solid fa-circle-info" style="color: var(--primary-red); margin-right: 4px;"></i>
+                        <strong>Standard Criteria:</strong> Age 18–65, weight ≥ 45kg (50kg for 450ml units), Hb ≥ 12.5 g/dL, pulse 50–100 bpm, and BP within normal clinical limits.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step-by-Step Donation Timeline -->
+            <div style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem;">
+                <h3 style="color: var(--dark-navy); font-size: 1.35rem; margin-bottom: 8px;">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--primary-red); margin-right: 8px;"></i>Step-by-Step Donation Timeline
+                </h3>
+                <p style="color: #64748b; font-size: 0.94rem;">What actually happens when you donate blood? From arrival to departure in under 45 minutes:</p>
+
+                <div class="timeline-grid">
+                    <!-- Step 1 -->
+                    <div class="timeline-step">
+                        <div class="timeline-step-header">
+                            <span class="timeline-badge">1</span>
+                            <span class="timeline-time"><i class="fa-regular fa-clock"></i> ~15 Minutes</span>
+                        </div>
+                        <h3>Pre-Donation & Health Check</h3>
+                        <p>Fill out a confidential medical questionnaire. A certified healthcare volunteer records your pulse and blood pressure and performs a painless finger-prick test to confirm your hemoglobin meets the ≥ 12.5 g/dL threshold.</p>
+                        <ul>
+                            <li>Drink 500ml of water beforehand</li>
+                            <li>Have a nutritious snack / light meal</li>
+                            <li>Carry any government photo ID</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-step">
+                        <div class="timeline-step-header">
+                            <span class="timeline-badge">2</span>
+                            <span class="timeline-time" style="color: var(--primary-red);"><i class="fa-solid fa-heart-pulse"></i> 8–10 Minutes</span>
+                        </div>
+                        <h3>The Blood Donation</h3>
+                        <p>Recline comfortably on a cushioned, sanitized donor couch. The phlebotomist prepares your arm with antiseptic and inserts a sterile, single-use needle. You are given a soft stress-ball to squeeze gently.</p>
+                        <ul>
+                            <li>Only 350ml or 450ml is collected</li>
+                            <li>Experienced phlebotomists assist you</li>
+                            <li>Relax and listen to music or chat</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-step">
+                        <div class="timeline-step-header">
+                            <span class="timeline-badge">3</span>
+                            <span class="timeline-time"><i class="fa-regular fa-clock"></i> ~15 Minutes</span>
+                        </div>
+                        <h3>Post-Donation Recovery</h3>
+                        <p>Rest comfortably on the couch for 5 to 10 minutes. Enjoy complimentary refreshments (fresh juice, high-iron biscuits, fruit), receive your official BloodConnect Donor Certificate, and return home knowing you saved up to 3 lives!</p>
+                        <ul>
+                            <li>Keep the bandage dry for 4–6 hours</li>
+                            <li>Stay well hydrated throughout the day</li>
+                            <li>Avoid strenuous heavy lifting for 24 hours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Interactive 5-Question Blood Donation Knowledge Quiz -->
+        <div class="card mb-4" style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <h2 style="color: var(--dark-navy); font-size: 1.6rem;">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--primary-red); margin-right: 8px;"></i>Blood Donation Knowledge Quiz
+                </h2>
+                <span class="badge-tag" style="background: #fee2e2; color: #b91c1c;">5 Clinical Questions</span>
+            </div>
+            <p style="color: #555; margin-top: 8px; font-size: 0.96rem;">
+                Test your knowledge of donor safety, blood components, and transfusion science. Submit your answers to receive instant scoring and comprehensive feedback!
+            </p>
+
+            <!-- Quiz Container -->
+            <div id="quizContainer" class="quiz-wrapper">
+                
+                <!-- Score Summary Banner -->
+                <div id="scoreBanner" class="score-banner">
+                    <h3 id="scoreBannerTitle" style="font-size: 1.4rem; margin-bottom: 6px;"></h3>
+                    <p id="scoreBannerText" style="font-size: 1rem; margin: 0;"></p>
+                </div>
+
+                <form id="knowledgeQuizForm">
+                    
+                    <!-- Question 1 -->
+                    <div class="quiz-question-card" id="qCard1">
+                        <div class="q-title">
+                            <span class="q-number-pill">Q1</span>
+                            <span>How often can a healthy adult safely donate whole blood?</span>
+                        </div>
+                        <div class="quiz-options">
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q1" value="30days">
+                                <span>Every 30 days (Once a month)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q1" value="3months">
+                                <span>Every 3 months (90 days for men / 120 days for women)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q1" value="1year">
+                                <span>Only once per calendar year</span>
+                            </label>
+                        </div>
+                        <div class="q-feedback" id="qFeedback1"></div>
+                    </div>
+
+                    <!-- Question 2 (New) -->
+                    <div class="quiz-question-card" id="qCard2">
+                        <div class="q-title">
+                            <span class="q-number-pill">Q2</span>
+                            <span>Which blood group is medically classified as the 'Universal Recipient'?</span>
+                        </div>
+                        <div class="quiz-options">
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q2" value="Oneg">
+                                <span>O-Negative (O-)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q2" value="Opos">
+                                <span>O-Positive (O+)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q2" value="ABpos">
+                                <span>AB-Positive (AB+)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q2" value="Apos">
+                                <span>A-Positive (A+)</span>
+                            </label>
+                        </div>
+                        <div class="q-feedback" id="qFeedback2"></div>
+                    </div>
+
+                    <!-- Question 3 (New) -->
+                    <div class="quiz-question-card" id="qCard3">
+                        <div class="q-title">
+                            <span class="q-number-pill">Q3</span>
+                            <span>What is the standard minimum waiting period before donating blood after getting a tattoo or body piercing?</span>
+                        </div>
+                        <div class="quiz-options">
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q3" value="none">
+                                <span>No waiting period required if the skin has healed</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q3" value="6months">
+                                <span>6 Months (to eliminate the window period for blood-borne infections)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q3" value="5years">
+                                <span>5 Years</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q3" value="lifetime">
+                                <span>Permanently barred from donating</span>
+                            </label>
+                        </div>
+                        <div class="q-feedback" id="qFeedback3"></div>
+                    </div>
+
+                    <!-- Question 4 (New) -->
+                    <div class="quiz-question-card" id="qCard4">
+                        <div class="q-title">
+                            <span class="q-number-pill">Q4</span>
+                            <span>Approximately what percentage of an adult's total blood volume is taken during a single whole blood donation?</span>
+                        </div>
+                        <div class="quiz-options">
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q4" value="7to8">
+                                <span>About 7% to 8% (roughly 350ml to 450ml)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q4" value="20">
+                                <span>About 20% (roughly 1 liter)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q4" value="35">
+                                <span>About 35%</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q4" value="50">
+                                <span>About 50%</span>
+                            </label>
+                        </div>
+                        <div class="q-feedback" id="qFeedback4"></div>
+                    </div>
+
+                    <!-- Question 5 (New) -->
+                    <div class="quiz-question-card" id="qCard5">
+                        <div class="q-title">
+                            <span class="q-number-pill">Q5</span>
+                            <span>What is the typical shelf life of donated Red Blood Cells (RBCs) when stored at 2°C to 6°C in preservative solution?</span>
+                        </div>
+                        <div class="quiz-options">
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q5" value="24to48hrs">
+                                <span>24 to 48 hours</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q5" value="7days">
+                                <span>7 days (1 week)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q5" value="35to42days">
+                                <span>35 to 42 days (approx. 5 to 6 weeks)</span>
+                            </label>
+                            <label class="quiz-opt-label">
+                                <input type="radio" name="q5" value="1year">
+                                <span>1 full year</span>
+                            </label>
+                        </div>
+                        <div class="q-feedback" id="qFeedback5"></div>
+                    </div>
+
+                    <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                        <button type="submit" id="submitQuizBtn" class="btn btn-primary" style="padding: 0.8rem 1.8rem; font-size: 1rem;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit & Check Answers
+                        </button>
+                        <button type="button" id="resetQuizBtn" class="btn btn-secondary" style="padding: 0.8rem 1.5rem; font-size: 1rem;">
+                            <i class="fa-solid fa-rotate-right"></i> Reset Quiz
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="container footer-bottom text-center">
-            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+            <div class="footer-col">
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-droplet" style="color: var(--primary-red);"></i>
+                    <span>Blood</span>Connect
+                </h3>
+                <p style="color: #cfd8dc; font-size: 0.95rem; line-height: 1.6;">A Community Engagement Project (CEP) connecting heroes with patients across Maharashtra.</p>
+                <div class="social-icons" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Quick Links</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html" style="color: #cfd8dc; text-decoration: none;">Home</a></li>
+                    <li><a href="request-blood.html" style="color: #cfd8dc; text-decoration: none;">Request Blood</a></li>
+                    <li><a href="donate-blood.html" style="color: #cfd8dc; text-decoration: none;">Donate Blood</a></li>
+                    <li><a href="find-donors.html" style="color: #cfd8dc; text-decoration: none;">Find Donors</a></li>
+                    <li><a href="blood-camps.html" style="color: #cfd8dc; text-decoration: none;">Blood Camps</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Maharashtra Hubs</h4>
+                <ul style="list-style: none; line-height: 2; color: #cfd8dc;">
+                    <li>Pune</li>
+                    <li>Nashik</li>
+                    <li>Ahilyanagar (Ahmednagar)</li>
+                    <li>Shrirampur</li>
+                    <li>Sangamner</li>
+                    <li>Mumbai</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Academic Coordination</h4>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-graduation-cap" style="color: var(--primary-red); margin-right: 8px;"></i> Amrutvahini COE, Sangamner</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-user-tie" style="color: var(--primary-red); margin-right: 8px;"></i> Guide: Prof. S. S. Dhokchaule</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-phone" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="tel:+918788279813" style="color: #cfd8dc; text-decoration: none;">+91 87882 79813</a></p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="mailto:sunilsonawne@gmail.com" style="color: #cfd8dc; text-decoration: none;">sunilsonawne@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 30px; color: #90a4ae;">
+            <p>&copy; 2026 BloodConnect | Community Engagement Project (CEP) | Amrutvahini College of Engineering, Sangamner. All rights reserved.</p>
         </div>
     </footer>
 

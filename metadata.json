@@ -1,0 +1,8 @@
+{
+  "name": "LifeConnect",
+  "description": "A Community Engagement Project connecting blood donors and emergency requests across Maharashtra.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

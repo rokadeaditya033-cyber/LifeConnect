@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeConnect - Donate Blood, Save Lives</title>
+    <title>BloodConnect - Donate Blood, Save Lives</title>
+    <meta name="description" content="Community blood donation and emergency request platform connecting verified donors and patients across Maharashtra.">
+    <meta property="og:title" content="BloodConnect - Donate Blood, Save Lives">
+    <meta property="og:description" content="Community blood donation and emergency request platform connecting verified donors and patients across Maharashtra.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -13,7 +16,7 @@
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-droplet pulse-icon"></i>
-            <span>Life</span>Connect
+            <span>Blood</span>Connect
         </div>
         <nav>
             <ul class="nav-links" id="navLinks">
@@ -62,142 +65,209 @@
             <div class="stat-card">
                 <i class="fa-solid fa-circle-check"></i>
                 <h3 id="statFulfilled">0</h3>
-                <p>Successful Requests</p>
+                <p>Fulfilled Requests</p>
             </div>
             <div class="stat-card">
-                <i class="fa-solid fa-tent"></i>
+                <i class="fa-solid fa-campground"></i>
                 <h3 id="statCamps">0</h3>
-                <p>Total Donation Camps</p>
+                <p>Active Blood Camps</p>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
     <section class="how-it-works container">
-        <h2 class="section-title">How <span>LifeConnect</span> Works</h2>
+        <h2 class="section-title text-center" style="text-align: center; font-size: 2rem; color: var(--dark-navy); margin-bottom: 0.5rem;">How <span>Blood</span>Connect Works</h2>
+        <p class="section-subtitle text-center" style="text-align: center; color: #666; margin-bottom: 2rem;">Bridging the critical gap between blood donors and emergency patients in three simple steps</p>
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
-                <i class="fa-solid fa-user-plus"></i>
-                <h3>Register or Request</h3>
-                <p>Sign up as a donor in seconds or submit an urgent blood request with your hospital details.</p>
+                <i class="fa-solid fa-user-plus" style="font-size: 2.2rem; color: var(--primary-red); margin-bottom: 15px;"></i>
+                <h3 style="color: var(--dark-navy); margin-bottom: 8px;">Register or Request</h3>
+                <p style="color: #666;">Sign up as a donor in seconds or submit an urgent blood request with your hospital details.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">2</div>
-                <i class="fa-solid fa-network-wired"></i>
-                <h3>Smart Matching</h3>
-                <p>Our platform filters verified donors by blood group and location across Maharashtra instantly.</p>
+                <i class="fa-solid fa-network-wired" style="font-size: 2.2rem; color: var(--dark-navy); margin-bottom: 15px;"></i>
+                <h3 style="color: var(--dark-navy); margin-bottom: 8px;">Smart Matching</h3>
+                <p style="color: #666;">Our platform filters verified donors by blood group and location across Maharashtra instantly.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
-                <i class="fa-solid fa-heart"></i>
-                <h3>Save Lives</h3>
-                <p>Coordinate safely, complete the donation, and help bring hope back to families in need.</p>
+                <i class="fa-solid fa-heart-circle-bolt" style="font-size: 2.2rem; color: var(--primary-red); margin-bottom: 15px;"></i>
+                <h3 style="color: var(--dark-navy); margin-bottom: 8px;">Save Lives</h3>
+                <p style="color: #666;">Coordinate safely, complete the donation, and help bring hope back to families in need.</p>
             </div>
         </div>
     </section>
 
-    <!-- Emergency Requests Ticker / Preview -->
-    <section class="emergency-preview container">
-        <div class="section-header">
-            <h2 class="section-title">Active Emergency Requests</h2>
-            <a href="request-blood.html" class="view-all">View All / Track &rarr;</a>
+    <!-- Active Emergency Requests Section -->
+    <section class="container my-5" style="margin-top: 3.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 10px;">
+            <h2 style="color: var(--dark-navy); font-size: 1.8rem;"><i class="fa-solid fa-truck-medical text-danger" style="color: var(--primary-red); margin-right: 8px;"></i> Active Emergency Requests</h2>
+            <a href="request-blood.html" style="color: var(--primary-red); font-weight: 600; text-decoration: none;">View All / Track <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div id="homeEmergencyGrid" class="emergency-grid">
-            <!-- Dynamically populated via main.js -->
+            <!-- Dynamically populated by js/main.js -->
         </div>
     </section>
 
-    <!-- Upcoming Camps Preview -->
-    <section class="camps-preview container">
-        <div class="section-header">
-            <h2 class="section-title">Upcoming Donation Camps</h2>
-            <a href="blood-camps.html" class="view-all">Explore All Camps &rarr;</a>
+    <!-- Upcoming Donation Camps Section -->
+    <section class="container my-5" style="margin-top: 3.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 10px;">
+            <h2 style="color: var(--dark-navy); font-size: 1.8rem;"><i class="fa-solid fa-calendar-check" style="color: var(--primary-red); margin-right: 8px;"></i> Upcoming Blood Camps</h2>
+            <a href="blood-camps.html" style="color: var(--primary-red); font-weight: 600; text-decoration: none;">Explore All Camps <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div id="homeCampsGrid" class="camps-grid">
-            <!-- Dynamically populated via main.js -->
+            <!-- Dynamically populated by js/main.js -->
         </div>
     </section>
 
     <!-- Awareness & Facts Section -->
-    <section class="awareness-preview">
-        <div class="container awareness-flex">
-            <div class="awareness-text">
-                <h2>Why Blood Donation Matters</h2>
-                <p>Every 2 seconds someone needs blood. A single donation can be separated into red blood cells, platelets, and plasma, helping multiple patients battling trauma, surgeries, and chronic illnesses.</p>
-                <a href="awareness.html" class="btn btn-primary">Read Awareness Guide</a>
+    <section style="background: #eef2f6; padding: 4rem 1rem; margin-top: 4rem;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
+            <div>
+                <h2 style="color: var(--dark-navy); font-size: 2rem; margin-bottom: 1rem;">Why Blood Donation Matters</h2>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Every 2 seconds someone needs blood. A single donation can be separated into red blood cells, platelets, and plasma, helping multiple patients battling trauma, surgeries, and chronic illnesses across hospitals in Maharashtra.
+                </p>
+                <a href="awareness.html" class="btn btn-primary"><i class="fa-solid fa-book-medical"></i> Read Awareness Guide</a>
             </div>
-            <div class="awareness-fact-card">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>Did You Know?</h3>
-                <p id="dailyFact">Only 1% of the population donates blood regularly, yet 1 in 3 people will need a blood transfusion in their lifetime.</p>
+            <div class="card" style="border-left: 5px solid var(--primary-red); padding: 25px;">
+                <h3 style="color: var(--dark-navy); margin-bottom: 10px;"><i class="fa-solid fa-lightbulb" style="color: #fbc02d; margin-right: 8px;"></i> Did You Know?</h3>
+                <p id="dailyFact" style="color: #555; line-height: 1.7;">
+                    Only 1% of the population donates blood regularly, yet 1 in 3 people will need a blood transfusion in their lifetime. Regular donations also help regulate blood iron levels and support cardiovascular well-being!
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials container">
-        <h2 class="section-title">Community Stories</h2>
-        <p class="section-subtitle">(Demonstration feedback from patients and donors)</p>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"LifeConnect helped us secure O-positive blood within 45 minutes during an emergency in Nashik. Truly a life-saving platform!"</p>
-                <h4>- Rajesh K., Nashik</h4>
+    <section class="container my-5" style="margin-top: 4rem;">
+        <h2 style="text-align: center; color: var(--dark-navy); font-size: 2rem; margin-bottom: 0.5rem;">Community Stories</h2>
+        <p style="text-align: center; color: #777; margin-bottom: 2rem;">Feedback from voluntary donors and emergency recipients across Maharashtra</p>
+        <div class="steps-grid">
+            <div class="card" style="padding: 25px;">
+                <p style="color: #555; font-style: italic; margin-bottom: 15px;">"BloodConnect helped us secure O-positive blood within 45 minutes during an emergency in Nashik. Truly a life-saving platform!"</p>
+                <h4 style="color: var(--dark-navy);">- Rajesh K., Nashik</h4>
             </div>
-            <div class="testimonial-card">
-                <p>"Registering as a donor was seamless. I got notified of a patient in Pune and was able to donate directly at the hospital."</p>
-                <h4>- Sneha P., Pune</h4>
+            <div class="card" style="padding: 25px;">
+                <p style="color: #555; font-style: italic; margin-bottom: 15px;">"Registering as a donor was seamless. I got notified of a patient in Pune and was able to donate directly at the hospital."</p>
+                <h4 style="color: var(--dark-navy);">- Sneha P., Pune</h4>
             </div>
-            <div class="testimonial-card">
-                <p>"The UI is clean and fast, and tracking requests gives complete peace of mind."</p>
-                <h4>- Amit R., Mumbai</h4>
+            <div class="card" style="padding: 25px;">
+                <p style="color: #555; font-style: italic; margin-bottom: 15px;">"The UI is clean and fast, and tracking requests gives complete peace of mind during stressful moments."</p>
+                <h4 style="color: var(--dark-navy);">- Amit R., Mumbai</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Project Showcase / CEP Initiative Section -->
+    <section class="container my-5" style="margin-top: 4.5rem; margin-bottom: 2rem;">
+        <div class="home-cep-showcase">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                <div class="academic-header-badge" style="margin-bottom: 0;">
+                    <i class="fa-solid fa-graduation-cap"></i> Community Engagement Project (CEP)
+                </div>
+                <span style="font-size: 0.9rem; color: #64748b; font-weight: 600;">
+                    <i class="fa-solid fa-building-columns" style="color: var(--primary-red);"></i> Amrutvahini College of Engineering, Sangamner
+                </span>
+            </div>
+
+            <div class="home-cep-grid">
+                <div>
+                    <h2 style="color: var(--dark-navy); font-size: 1.85rem; margin-bottom: 12px; margin-top: 10px;">
+                        Engineering Technology for Grassroots Healthcare
+                    </h2>
+                    <p style="color: #475569; font-size: 0.98rem; line-height: 1.7; margin-bottom: 18px;">
+                        BloodConnect was engineered by student developers at <strong>Amrutvahini College of Engineering (AVCOE), Sangamner</strong>, under the faculty guidance of <strong>Prof. S. S. Dhokchaule</strong>. Built to solve critical blood delivery delays in rural and peri-urban Maharashtra by directly connecting regional voluntary donors with emergency patients.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+                        <a href="about.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem;">
+                            <i class="fa-solid fa-users"></i> Learn More on About Us <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i>
+                        </a>
+                        <span style="font-size: 0.88rem; color: #64748b;">
+                            <i class="fa-solid fa-check-double" style="color: var(--success-green); margin-right: 4px;"></i> Decentralized Public Registry
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Academic Team Mini-Card -->
+                <div style="background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 12px;">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: #fee2e2; color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div>
+                            <strong style="color: var(--dark-navy); display: block; font-size: 0.98rem;">Prof. S. S. Dhokchaule</strong>
+                            <small style="color: #b91c1c; font-weight: 600;">Project Mentor & Faculty Advisor</small>
+                        </div>
+                    </div>
+
+                    <div style="font-size: 0.88rem; color: #475569;">
+                        <span style="font-weight: 700; color: var(--dark-navy); display: block; margin-bottom: 6px;">
+                            <i class="fa-solid fa-laptop-code" style="color: var(--primary-red); margin-right: 4px;"></i> Student Developers:
+                        </span>
+                        <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: #334155;">
+                            <li><i class="fa-solid fa-user-graduate" style="color: var(--primary-red); font-size: 0.8rem; margin-right: 6px;"></i> Rokade Aditya Pravin</li>
+                            <li><i class="fa-solid fa-user-graduate" style="color: var(--primary-red); font-size: 0.8rem; margin-right: 6px;"></i> Shinde Sanket Gopal</li>
+                            <li><i class="fa-solid fa-user-graduate" style="color: var(--primary-red); font-size: 0.8rem; margin-right: 6px;"></i> Sonawane Girish Sunil</li>
+                            <li><i class="fa-solid fa-user-graduate" style="color: var(--primary-red); font-size: 0.8rem; margin-right: 6px;"></i> Vakhare Shrinivas Pritam</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
+        <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
             <div class="footer-col">
-                <h3><span>Life</span>Connect</h3>
-                <p>A Community Engagement Project (CEP) connecting heroes with patients across Maharashtra.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-droplet" style="color: var(--primary-red);"></i>
+                    <span>Blood</span>Connect
+                </h3>
+                <p style="color: #cfd8dc; font-size: 0.95rem; line-height: 1.6;">A Community Engagement Project (CEP) conceptualized by engineering students of Amrutvahini College of Engineering, Sangamner.</p>
+                <div class="social-icons" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="request-blood.html">Request Blood</a></li>
-                    <li><a href="donate-blood.html">Donate Blood</a></li>
-                    <li><a href="find-donors.html">Find Donors</a></li>
-                    <li><a href="blood-camps.html">Blood Camps</a></li>
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Quick Links</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html" style="color: #cfd8dc; text-decoration: none;">Home</a></li>
+                    <li><a href="request-blood.html" style="color: #cfd8dc; text-decoration: none;">Request Blood</a></li>
+                    <li><a href="donate-blood.html" style="color: #cfd8dc; text-decoration: none;">Donate Blood</a></li>
+                    <li><a href="find-donors.html" style="color: #cfd8dc; text-decoration: none;">Find Donors</a></li>
+                    <li><a href="blood-camps.html" style="color: #cfd8dc; text-decoration: none;">Blood Camps</a></li>
+                    <li><a href="about.html" style="color: #cfd8dc; text-decoration: none;">About Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Maharashtra Hubs</h4>
-                <ul>
-                    <li>Pune</li>
-                    <li>Nashik</li>
-                    <li>Ahilyanagar (Ahmednagar)</li>
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Maharashtra Hubs</h4>
+                <ul style="list-style: none; line-height: 2; color: #cfd8dc;">
+                    <li>Sangamner (AVCOE Hub)</li>
                     <li>Shrirampur</li>
-                    <li>Sangamner</li>
+                    <li>Ahilyanagar (Ahmednagar)</li>
+                    <li>Nashik</li>
+                    <li>Pune</li>
                     <li>Mumbai</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p><i class="fa-solid fa-location-dot"></i> Maharashtra, India</p>
-                <p><i class="fa-solid fa-phone"></i> +91 1800-LIFE-CONNECT</p>
-                <p><i class="fa-solid fa-envelope"></i> support@lifeconnect.org</p>
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Academic Coordination</h4>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-graduation-cap" style="color: var(--primary-red); margin-right: 8px;"></i> Amrutvahini COE, Sangamner</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-user-tie" style="color: var(--primary-red); margin-right: 8px;"></i> Guide: Prof. S. S. Dhokchaule</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-phone" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="tel:+918788279813" style="color: #cfd8dc; text-decoration: none;">+91 87882 79813</a></p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="mailto:sunilsonawne@gmail.com" style="color: #cfd8dc; text-decoration: none;">sunilsonawne@gmail.com</a></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        <div class="footer-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 30px; color: #90a4ae;">
+            <p>&copy; 2026 BloodConnect | Community Engagement Project (CEP) | Amrutvahini College of Engineering, Sangamner. All rights reserved.</p>
         </div>
     </footer>
 

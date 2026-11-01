@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - LifeConnect</title>
+    <title>Contact Us - BloodConnect | Emergency Helpline</title>
+    <meta name="description" content="Contact the BloodConnect support desk for emergency blood inquiries across Maharashtra. Helpline: +91 87882 79813, Email: sunilsonawne@gmail.com.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header class="navbar">
-        <div class="nav-brand"><i class="fa-solid fa-droplet"></i><span>Life</span>Connect</div>
+        <div class="nav-brand">
+            <i class="fa-solid fa-droplet pulse-icon"></i>
+            <span>Blood</span>Connect
+        </div>
         <nav>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
@@ -22,49 +27,202 @@
                 <li><a href="awareness.html">Awareness</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html" class="active">Contact Us</a></li>
-                <li id="authNavItem"><a href="login.html" class="btn-outline">Login</a></li>
+                <li id="authNavItem"><a href="login.html" class="btn-outline">Login / Register</a></li>
                 <li><a href="admin-login.html" class="admin-link">Admin Login</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
+    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Contact Us & Feedback</h1>
-            <p>Get in touch with our support team or submit your feedback.</p>
+            <div class="academic-header-badge" style="background: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.3);">
+                <i class="fa-solid fa-headset"></i> 24x7 Emergency Helpline
+            </div>
+            <h1>Contact Us & Support Desk</h1>
+            <p>Direct assistance for emergency blood requirements, donor verification, and camp coordination across Maharashtra.</p>
         </div>
     </section>
 
-    <main class="container my-4">
-        <div class="form-container card">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="contactName">Your Name *</label>
-                    <input type="text" id="contactName" required placeholder="Full Name">
+    <main class="container my-4" style="margin-top: 3rem; margin-bottom: 4rem;">
+        
+        <div class="main-content-grid">
+            
+            <!-- Contact Form -->
+            <div class="card" style="padding: 30px;">
+                <h2 style="color: var(--dark-navy); font-size: 1.5rem; margin-bottom: 8px;">
+                    <i class="fa-solid fa-paper-plane" style="color: var(--primary-red); margin-right: 8px;"></i> Send an Inquiry or Feedback
+                </h2>
+                <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">
+                    Have questions regarding donation eligibility, camp organization, or technical support? Fill in the form below:
+                </p>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Your Full Name *</label>
+                        <input type="text" id="contactName" required placeholder="e.g. Rahul Patil">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email Address *</label>
+                        <input type="email" id="contactEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Inquiry Category *</label>
+                        <select id="contactSubject" required>
+                            <option value="emergency">Emergency Blood Request Assistance</option>
+                            <option value="donor">Donor Registration / Update</option>
+                            <option value="camp">Blood Donation Camp Organization</option>
+                            <option value="hospital">Hospital / Primary Health Center Tie-Up</option>
+                            <option value="academic">Academic / CEP Project Inquiry</option>
+                            <option value="other">General Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMsg">Message / Case Details *</label>
+                        <textarea id="contactMsg" rows="5" required placeholder="Describe your requirement, hospital name, city, or feedback..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" style="padding: 0.75rem 1.5rem; font-size: 1rem;">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Emergency & Support Desk Card -->
+            <div>
+                <div class="card" style="padding: 28px; border-left: 5px solid var(--primary-red); margin-bottom: 25px;">
+                    <h3 style="color: var(--dark-navy); font-size: 1.35rem; margin-bottom: 15px;">
+                        <i class="fa-solid fa-truck-medical" style="color: var(--primary-red); margin-right: 6px;"></i> Emergency Helpline
+                    </h3>
+                    <p style="color: #475569; font-size: 0.94rem; line-height: 1.6; margin-bottom: 20px;">
+                        For urgent blood requirements or critical patient needs across Maharashtra, reach our student coordination helpline directly:
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #fee2e2; color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong style="color: var(--dark-navy); display: block; font-size: 0.9rem;">Helpline / WhatsApp:</strong>
+                                <a href="tel:+918788279813" style="font-size: 1.15rem; font-weight: 700; color: var(--primary-red); text-decoration: none; display: inline-block; margin-top: 2px;">
+                                    +91 87882 79813
+                                </a>
+                                <small style="display: block; color: #64748b;">Available 24x7 for emergency coordination</small>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <div style="width: 42px; height: 42px; border-radius: 50%; background: #eff6ff; color: #1d4ed8; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong style="color: var(--dark-navy); display: block; font-size: 0.9rem;">Support & Coordination Email:</strong>
+                                <a href="mailto:sunilsonawne@gmail.com" style="font-size: 1.02rem; font-weight: 600; color: #1d4ed8; text-decoration: none; word-break: break-all; display: inline-block; margin-top: 2px;">
+                                    sunilsonawne@gmail.com
+                                </a>
+                                <small style="display: block; color: #64748b;">Monitored continuously by the CEP team</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px; display: flex; gap: 10px;">
+                        <a href="tel:+918788279813" class="btn btn-primary" style="flex: 1; justify-content: center; font-size: 0.92rem; padding: 0.6rem;">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                        <a href="mailto:sunilsonawne@gmail.com" class="btn btn-secondary" style="flex: 1; justify-content: center; font-size: 0.92rem; padding: 0.6rem;">
+                            <i class="fa-solid fa-envelope"></i> Email Us
+                        </a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="contactEmail">Email Address *</label>
-                    <input type="email" id="contactEmail" required placeholder="name@example.com">
+
+                <!-- Academic Coordination Note -->
+                <div class="card" style="padding: 24px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                    <h4 style="color: var(--dark-navy); font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-building-columns" style="color: var(--primary-red);"></i> Academic Institutional Desk
+                    </h4>
+                    <p style="color: #64748b; font-size: 0.9rem; line-height: 1.6; margin-bottom: 10px;">
+                        <strong>Amrutvahini College of Engineering, Sangamner</strong><br>
+                        Community Engagement Project (CEP) Initiative<br>
+                        <strong>Project Mentor:</strong> Prof. S. S. Dhokchaule
+                    </p>
+                    <small style="color: #475569; display: block; line-height: 1.5;">
+                        <i class="fa-solid fa-location-dot" style="color: var(--primary-red); margin-right: 4px;"></i>
+                        Sangamner, Dist. Ahmednagar (Ahilyanagar), Maharashtra - 422608
+                    </small>
                 </div>
-                <div class="form-group">
-                    <label for="contactSubject">Subject *</label>
-                    <input type="text" id="contactSubject" required placeholder="Inquiry / Feedback">
-                </div>
-                <div class="form-group">
-                    <label for="contactMsg">Message *</label>
-                    <textarea id="contactMsg" rows="4" required placeholder="Type your message here"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-            </form>
+            </div>
+
         </div>
+
     </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="container footer-bottom text-center">
-            <p>&copy; 2026 LifeConnect CEP Project. All rights reserved.</p>
+        <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+            <div class="footer-col">
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-droplet" style="color: var(--primary-red);"></i>
+                    <span>Blood</span>Connect
+                </h3>
+                <p style="color: #cfd8dc; font-size: 0.95rem; line-height: 1.6;">A Community Engagement Project (CEP) conceptualized by engineering students of Amrutvahini College of Engineering, Sangamner.</p>
+                <div class="social-icons" style="margin-top: 15px; display: flex; gap: 12px;">
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 1.1rem;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Quick Links</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html" style="color: #cfd8dc; text-decoration: none;">Home</a></li>
+                    <li><a href="request-blood.html" style="color: #cfd8dc; text-decoration: none;">Request Blood</a></li>
+                    <li><a href="donate-blood.html" style="color: #cfd8dc; text-decoration: none;">Donate Blood</a></li>
+                    <li><a href="find-donors.html" style="color: #cfd8dc; text-decoration: none;">Find Donors</a></li>
+                    <li><a href="blood-camps.html" style="color: #cfd8dc; text-decoration: none;">Blood Camps</a></li>
+                    <li><a href="about.html" style="color: #cfd8dc; text-decoration: none;">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Maharashtra Hubs</h4>
+                <ul style="list-style: none; line-height: 2; color: #cfd8dc;">
+                    <li>Sangamner (AVCOE Hub)</li>
+                    <li>Shrirampur</li>
+                    <li>Ahilyanagar (Ahmednagar)</li>
+                    <li>Nashik</li>
+                    <li>Pune</li>
+                    <li>Mumbai</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color: var(--pure-white); margin-bottom: 15px;">Academic Coordination</h4>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-graduation-cap" style="color: var(--primary-red); margin-right: 8px;"></i> Amrutvahini COE, Sangamner</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-user-tie" style="color: var(--primary-red); margin-right: 8px;"></i> Guide: Prof. S. S. Dhokchaule</p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-phone" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="tel:+918788279813" style="color: #cfd8dc; text-decoration: none;">+91 87882 79813</a></p>
+                <p style="color: #cfd8dc; margin-bottom: 6px;"><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> <a href="mailto:sunilsonawne@gmail.com" style="color: #cfd8dc; text-decoration: none;">sunilsonawne@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 30px; color: #90a4ae;">
+            <p>&copy; 2026 BloodConnect | Community Engagement Project (CEP) | Amrutvahini College of Engineering, Sangamner. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('contactName').value;
+                    alert(`Thank you, ${name}! Your message has been received by our CEP coordination desk. We will respond promptly via email or phone.`);
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

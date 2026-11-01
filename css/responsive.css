@@ -1,10 +1,151 @@
-@media (max-width: 768px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--dark-navy); padding: 20px; text-align: center; }
-  .nav-links.active { display: flex; }
-  .hamburger { display: block; cursor: pointer; font-size: 1.5rem; }
-  .hero h1 { font-size: 2rem; }
-  .hero-buttons { flex-direction: column; }
+/* Responsive Stylesheet for BloodConnect */
+
+/* 1. Medium Screens (1240px down to 992px) - Clean Wrap & Compact Spacing */
+@media (min-width: 992px) and (max-width: 1240px) {
+  .navbar {
+    padding: 0.7rem 1.25rem;
+    gap: 1rem;
+  }
+  .nav-brand {
+    font-size: 1.35rem;
+  }
+  .navbar nav {
+    margin-left: 0.5rem;
+  }
+  .nav-links {
+    gap: 6px 8px;
+    justify-content: flex-end;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.32rem 0.45rem;
+  }
+  .btn-outline,
+  .admin-link {
+    font-size: 0.82rem !important;
+    padding: 0.35rem 0.75rem !important;
+  }
 }
-@media (min-width: 769px) {
-  .hamburger { display: none; }
+
+/* 2. Smaller Viewports (991px and below) - Collapsible Mobile Menu */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0.8rem 1.25rem;
+    position: sticky;
+    top: 0;
+  }
+  .nav-brand {
+    font-size: 1.35rem;
+  }
+  .navbar nav {
+    margin: 0;
+    flex: 0;
+  }
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-navy);
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    gap: 8px;
+    align-items: stretch;
+    z-index: 9999;
+    box-sizing: border-box;
+  }
+  .nav-links.active {
+    display: flex;
+    animation: navDropdown 0.22s ease-out forwards;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.98rem;
+    text-align: left;
+    border-radius: 6px;
+  }
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .btn-outline,
+  .admin-link {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 6px;
+    padding: 0.7rem 1rem !important;
+    font-size: 0.95rem !important;
+  }
+  .hero {
+    padding: 4rem 1.25rem;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+/* 3. Mobile Phones (576px and below) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  .nav-brand {
+    font-size: 1.25rem;
+  }
+  .hero {
+    padding: 3.5rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 2rem 0;
+  }
+  .stat-card {
+    padding: 18px;
+  }
+  .stat-card h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@keyframes navDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
